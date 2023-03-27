@@ -7,6 +7,7 @@ var jump_power = Vector2.ZERO
 var direction = 1
 
 export var gravity = Vector2(0,30)
+export var wall_slide = Vector2(0,-10)
 
 export var move_speed = 20
 export var max_move = 300
@@ -81,7 +82,10 @@ func set_wall_raycasts(is_enabled):
 	$Wall/Right.enabled = is_enabled
 
 func do_damage(d):
-	queue_free()
+	Global.decrease_health(d)
+	if Global.health <= 0:
+		die()
 
 func die():
+	Global.decrease_lives(1)
 	queue_free()

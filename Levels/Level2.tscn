@@ -1,17 +1,17 @@
 [gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Levels/Platform.tres" type="TileSet" id=1]
-[ext_resource path="res://Assets/platformPack_tilesheet.png" type="Texture" id=2]
-[ext_resource path="res://Camera.gd" type="Script" id=3]
-[ext_resource path="res://Assets/backgroundCastles.png" type="Texture" id=4]
-[ext_resource path="res://Enemy_Ground.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Player/Player_Container.gd" type="Script" id=6]
-[ext_resource path="res://Enemy_Flying.tscn" type="PackedScene" id=7]
-[ext_resource path="res://HUD/HUD.gd" type="Script" id=8]
-[ext_resource path="res://Coin/Coin.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Levels/Ground.tres" type="TileSet" id=10]
-[ext_resource path="res://Levels/Portal.gd" type="Script" id=11]
-[ext_resource path="res://Assets/door_closedMid.png" type="Texture" id=12]
+[ext_resource path="res://HUD/HUD.gd" type="Script" id=2]
+[ext_resource path="res://Coin/Coin.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Levels/Ground.tres" type="TileSet" id=4]
+[ext_resource path="res://Levels/Portal.gd" type="Script" id=5]
+[ext_resource path="res://Enemy_Flying.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Enemy_Ground.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/door_closedMid.png" type="Texture" id=8]
+[ext_resource path="res://Camera.gd" type="Script" id=9]
+[ext_resource path="res://Player/Player_Container.gd" type="Script" id=10]
+[ext_resource path="res://Assets/platformPack_tilesheet.png" type="Texture" id=11]
+[ext_resource path="res://Assets/backgroundCastles.png" type="Texture" id=12]
 
 [sub_resource type="OccluderPolygon2D" id=17]
 polygon = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
@@ -21,7 +21,7 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 
 [sub_resource type="TileSet" id=16]
 0/name = "platformPack_tilesheet.png 0"
-0/texture = ExtResource( 2 )
+0/texture = ExtResource( 11 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 640, 64, 64, 64 )
@@ -44,7 +44,7 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 0/z_index = 0
 
 [sub_resource type="RectangleShape2D" id=21]
-extents = Vector2( 95.6864, 5.52904 )
+extents = Vector2( 95.6864, 5.10264 )
 
 [sub_resource type="RectangleShape2D" id=22]
 extents = Vector2( 96.6702, 6.45074 )
@@ -66,7 +66,7 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 
 [sub_resource type="TileSet" id=19]
 0/name = "platformPack_tilesheet.png 0"
-0/texture = ExtResource( 2 )
+0/texture = ExtResource( 11 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 128, 320, 64, 64 )
@@ -95,7 +95,7 @@ scale = Vector2( 1.03463, 1.08515 )
 [node name="Background_Image" type="Sprite" parent="."]
 position = Vector2( 640.81, 191.678 )
 scale = Vector2( 1.24214, 0.764579 )
-texture = ExtResource( 4 )
+texture = ExtResource( 12 )
 
 [node name="Background" type="TileMap" parent="."]
 self_modulate = Color( 1, 1, 1, 0.458824 )
@@ -106,7 +106,7 @@ format = 1
 tile_data = PoolIntArray( 65539, 0, 0, 131088, 0, 0 )
 
 [node name="Ground" type="TileMap" parent="."]
-tile_set = ExtResource( 10 )
+tile_set = ExtResource( 4 )
 cell_custom_transform = Transform2D( 65.034, 0, 0, 64, 0, 0 )
 collision_layer = 2
 format = 1
@@ -117,12 +117,12 @@ tile_set = ExtResource( 1 )
 cell_custom_transform = Transform2D( 65.034, 0, 0, 64, 0, 0 )
 collision_layer = 2
 format = 1
-tile_data = PoolIntArray( -65536, 4, 0, -65517, 4, 0, 0, 4, 0, 19, 4, 0, 65536, 4, 0, 65555, 4, 0, 131072, 4, 0, 131091, 4, 0, 196608, 4, 0, 196615, 6, 0, 196616, 6, 0, 196617, 6, 0, 196627, 4, 0, 262144, 4, 0, 262163, 4, 0, 327680, 4, 0, 327683, 6, 0, 327684, 6, 0, 327685, 6, 0, 327692, 6, 0, 327694, 6, 0, 327696, 6, 0, 327699, 4, 0, 393216, 4, 0, 393235, 4, 0, 458752, 4, 0, 458760, 5, 0, 458771, 4, 0, 524288, 3, 0, 524289, 3, 0, 524290, 3, 0, 524291, 3, 0, 524292, 3, 0, 524293, 3, 0, 524294, 3, 0, 524295, 3, 0, 524296, 3, 0, 524297, 3, 0, 524298, 3, 0, 524299, 3, 0, 524300, 3, 0, 524301, 3, 0, 524302, 3, 0, 524303, 3, 0, 524304, 3, 0, 524305, 3, 0, 524306, 3, 0, 524307, 3, 0 )
+tile_data = PoolIntArray( -65536, 4, 0, -65517, 4, 0, 0, 4, 0, 19, 4, 0, 65536, 4, 0, 65555, 4, 0, 131072, 4, 0, 131091, 4, 0, 196608, 4, 0, 196615, 6, 0, 196616, 6, 0, 196617, 6, 0, 196627, 4, 0, 262144, 4, 0, 262163, 4, 0, 327680, 4, 0, 327683, 6, 0, 327684, 6, 0, 327685, 6, 0, 327692, 6, 0, 327694, 6, 0, 327696, 6, 0, 327699, 4, 0, 393216, 4, 0, 393235, 4, 0, 458752, 4, 0, 458758, 4, 0, 458760, 5, 0, 458771, 4, 0, 524288, 3, 0, 524289, 3, 0, 524290, 3, 0, 524291, 3, 0, 524292, 3, 0, 524293, 3, 0, 524294, 3, 0, 524295, 3, 0, 524296, 3, 0, 524297, 3, 0, 524298, 3, 0, 524299, 3, 0, 524300, 3, 0, 524301, 3, 0, 524302, 3, 0, 524303, 3, 0, 524304, 3, 0, 524305, 3, 0, 524306, 3, 0, 524307, 3, 0 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Platform"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/StaticBody2D"]
-position = Vector2( 542.223, 197.208 )
+position = Vector2( 542.223, 197.634 )
 shape = SubResource( 21 )
 one_way_collision = true
 
@@ -147,44 +147,44 @@ shape = SubResource( 25 )
 one_way_collision = true
 
 [node name="Player_Container" type="Node2D" parent="."]
-script = ExtResource( 6 )
+script = ExtResource( 10 )
 
 [node name="Enemy_Container" type="Node2D" parent="."]
 
-[node name="Enemy_Ground" parent="Enemy_Container" instance=ExtResource( 5 )]
+[node name="Enemy_Ground" parent="Enemy_Container" instance=ExtResource( 7 )]
 position = Vector2( 237.766, -0.921531 )
 max_constraint = 600
 min_constraint = 140
 
-[node name="Enemy_Flying" parent="Enemy_Container" instance=ExtResource( 7 )]
+[node name="Enemy_Flying" parent="Enemy_Container" instance=ExtResource( 6 )]
 
-[node name="Enemy_Ground2" parent="Enemy_Container" instance=ExtResource( 5 )]
+[node name="Enemy_Ground2" parent="Enemy_Container" instance=ExtResource( 7 )]
 position = Vector2( 18.3641, -316.085 )
 max_constraint = 150
 min_constraint = 44
 
 [node name="Coin_Container" type="Node2D" parent="."]
 
-[node name="Coin" parent="Coin_Container" instance=ExtResource( 9 )]
-position = Vector2( 798.353, 336.359 )
+[node name="Coin" parent="Coin_Container" instance=ExtResource( 3 )]
+position = Vector2( 423.34, 259.872 )
 
-[node name="Coin2" parent="Coin_Container" instance=ExtResource( 9 )]
-position = Vector2( 217.469, 184.306 )
+[node name="Coin2" parent="Coin_Container" instance=ExtResource( 3 )]
+position = Vector2( 95.6864, 105.055 )
 
-[node name="Coin3" parent="Coin_Container" instance=ExtResource( 9 )]
-position = Vector2( 560.587, 47.9196 )
+[node name="Coin3" parent="Coin_Container" instance=ExtResource( 3 )]
+position = Vector2( 271.595, 363.083 )
 
-[node name="Coin4" parent="Coin_Container" instance=ExtResource( 9 )]
-position = Vector2( 1115.37, 411.003 )
+[node name="Coin4" parent="Coin_Container" instance=ExtResource( 3 )]
+position = Vector2( 881.475, 158.503 )
 
-[node name="Portal_to_2" type="Area2D" parent="."]
-script = ExtResource( 11 )
+[node name="Portal_to_3" type="Area2D" parent="."]
+script = ExtResource( 5 )
 
-[node name="Sprite" type="Sprite" parent="Portal_to_2"]
+[node name="Sprite" type="Sprite" parent="Portal_to_3"]
 position = Vector2( 1101.78, 478.983 )
-texture = ExtResource( 12 )
+texture = ExtResource( 8 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Portal_to_2"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Portal_to_3"]
 position = Vector2( 1101.78, 478.983 )
 polygon = PoolVector2Array( 35, 35, -35, 35, -35, -35, 35, -35 )
 
@@ -207,7 +207,7 @@ drag_margin_left = 0.1
 drag_margin_top = 0.1
 drag_margin_right = 0.1
 drag_margin_bottom = 0.1
-script = ExtResource( 3 )
+script = ExtResource( 9 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -216,7 +216,7 @@ margin_left = -1.0
 margin_top = 6.0
 margin_right = 471.0
 margin_bottom = 48.0
-script = ExtResource( 8 )
+script = ExtResource( 2 )
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/HUD"]
 margin_right = 1024.0
@@ -250,4 +250,4 @@ text = "Health
 align = 1
 valign = 1
 
-[connection signal="body_entered" from="Portal_to_2" to="Portal_to_2" method="_on_Portal_entered"]
+[connection signal="body_entered" from="Portal_to_3" to="Portal_to_3" method="_on_Portal_entered"]
