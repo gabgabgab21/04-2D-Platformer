@@ -1,14 +1,21 @@
-# Project Name
+# 04-2D-Platformer
 
-Context and date
+Game for C220
+3/26/23
 
-Description
+A 2D Platformer game where you can collect gems and dodge enemies.
 
 ## Implementation
-Which features you included
+Character can move left and right 
+Character can jump
+Has enemies, platforms, and objects with which you can interact
+The camera follows the player
+Has a scoring system
 
 ## References
+Kenney.nl
 
 ## Future Development
 
 ## Created by
+Gabby Thomas
